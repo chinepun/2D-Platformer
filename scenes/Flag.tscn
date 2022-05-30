@@ -34,6 +34,7 @@ offset = Vector2( 0, -18 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -36 )
 frames = SubResource( 2 )
+frame = 1
 playing = true
 centered = false
 
