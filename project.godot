@@ -11,13 +11,13 @@ config_version=4
 [application]
 
 config/name="2D-Platformer"
-run/main_scene="res://scenes/Levels/Level_004.tscn"
+run/main_scene="res://scenes/UI/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-LevelManager="*res://scenes/LevelManager.tscn"
 Helpers="*res://scripts/helpers.gd"
+LevelManager="*res://scenes/LevelManager.tscn"
 
 [display]
 
