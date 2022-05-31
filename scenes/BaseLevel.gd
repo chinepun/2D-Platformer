@@ -4,6 +4,7 @@ signal coin_total_changed
 
 export(PackedScene) var levelCompleteScene
 
+var pauseScene = preload("res://scenes/UI/PauseMenu.tscn")
 var playerScene = preload("res://scenes/Player.tscn")
 var spawnPosition = Vector2.ZERO
 var currentPlayerNode = null
@@ -21,6 +22,11 @@ func on_player_won():
 	currentPlayerNode.queue_free()
 	var levelComplete = levelCompleteScene.instance()
 	add_child(levelComplete)
+
+func _unhandled_input(event):
+	if (event.is_action_pressed("pause")):
+		var pauseInstance = pauseScene.instance()
+		add_child(pauseInstance)
 
 func coin_total_changed(new_total):
 	total_coins = new_total

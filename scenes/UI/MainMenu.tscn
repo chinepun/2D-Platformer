@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://resources/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/UI/AnimatedButton.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://assets/tiles/tiles_packed.png" type="Texture" id=4]
 [ext_resource path="res://scenes/Clouds.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/GameCamera.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/GameCamera.gd" type="Script" id=7]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 
@@ -688,14 +687,11 @@ script = ExtResource( 3 )
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 126, 72 )
 
-[node name="GameCamera" type="Camera2D" parent="Node2D" groups=["camera"] instance=ExtResource( 6 )]
-position = Vector2( -11, 3 )
-current = true
-script = ExtResource( 7 )
+[node name="GameCamera" parent="Node2D" instance=ExtResource( 6 )]
 backgroundColor = Color( 0.556863, 0.678431, 0.545098, 1 )
 shakeNoise = SubResource( 1 )
 
-[node name="Clouds" type="Node2D" parent="Node2D/GameCamera" instance=ExtResource( 5 )]
+[node name="Clouds" parent="Node2D/GameCamera" instance=ExtResource( 5 )]
 
 [node name="TileMap" type="TileMap" parent="Node2D"]
 position = Vector2( -10, 2 )
