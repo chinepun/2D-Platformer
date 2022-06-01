@@ -10,6 +10,7 @@ func _on_Area2D_area_entered(_area):
 	
 	var base_level = get_tree().get_nodes_in_group("base_level")[0]
 	base_level.coin_collected()
+	$RandomAudioStreamPlayer.play()
 
 func disable_pickup():
 	$Area2D/CollisionShape2D.disabled = true

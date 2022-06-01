@@ -19,7 +19,7 @@ func _ready():
 	$Flag.connect("player_won", self, "on_player_won");
 
 func on_player_won():
-	currentPlayerNode.queue_free()
+	currentPlayerNode.disable_player_input()
 	var levelComplete = levelCompleteScene.instance()
 	add_child(levelComplete)
 

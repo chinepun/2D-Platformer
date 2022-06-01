@@ -6,6 +6,10 @@ var gravity = 1000
 func _ready():
 	if (velocity.x > 0):
 		$Visuals.scale = Vector2(-1, 1)
+	
+	$DeathSoundPlayer.play()
+	$DeathSoundPlayer1.play()
+	$DeathSoundPlayer2.play()
 
 func _process(delta):
 #	velocity.y = gravity * delta

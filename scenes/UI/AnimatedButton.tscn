@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://resources/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/UI/AnimatedButton.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/click_002.ogg" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hover"
@@ -85,6 +86,9 @@ size_flags_vertical = 0
 theme = ExtResource( 1 )
 text = "Testing"
 script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [node name="HoverAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/hover = SubResource( 1 )
