@@ -1,7 +1,6 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://assets/tiles/tiles_packed.png" type="Texture" id=1]
-[ext_resource path="res://scenes/GameCamera.gd" type="Script" id=2]
 [ext_resource path="res://scenes/GameCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Clouds.tscn" type="PackedScene" id=4]
 
@@ -682,14 +681,11 @@ resource_local_to_scene = true
 [node name="MenuBackground" type="Node2D"]
 position = Vector2( 126, 72 )
 
-[node name="GameCamera" type="Camera2D" parent="." groups=["camera"] instance=ExtResource( 3 )]
-position = Vector2( -11, 3 )
-current = true
-script = ExtResource( 2 )
+[node name="GameCamera" parent="." instance=ExtResource( 3 )]
 backgroundColor = Color( 0.556863, 0.678431, 0.545098, 1 )
 shakeNoise = SubResource( 1 )
 
-[node name="Clouds" type="Node2D" parent="GameCamera" instance=ExtResource( 4 )]
+[node name="Clouds" parent="GameCamera" instance=ExtResource( 4 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -10, 2 )

@@ -19,5 +19,11 @@ func _process(delta):
 	rect_pivot_offset = rect_min_size / 2
 
 func on_mouse_exited():
+	reset_button_state()
+
+func reset_button_state():
 	if (!disableHoverAnim):
 		$HoverAnimationPlayer.play_backwards("hover")
+
+func _on_AnimationButton_focus_exited():
+	reset_button_state()

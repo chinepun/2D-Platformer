@@ -37,6 +37,7 @@ tracks/0/keys = {
 }
 
 [node name="MouseCursor" type="CanvasLayer"]
+pause_mode = 2
 layer = 12
 script = ExtResource( 1 )
 

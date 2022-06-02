@@ -35,6 +35,9 @@ margin_bottom = -15.0
 grow_vertical = 0
 rect_min_size = Vector2( 100, 0 )
 theme = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 margin_right = 100.0

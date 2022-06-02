@@ -76,7 +76,7 @@ tracks/1/keys = {
 "values": [ Vector2( 96, 25 ), Vector2( 120, 25 ), Vector2( 96, 25 ) ]
 }
 
-[node name="AnimationButton" type="Button"]
+[node name="AnimationButton" type="Button" groups=["animated_button"]]
 margin_right = 120.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 120, 25 )
@@ -96,3 +96,5 @@ anims/hover = SubResource( 1 )
 [node name="ClickAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/click = SubResource( 3 )
 anims/hover = SubResource( 4 )
+
+[connection signal="focus_exited" from="." to="." method="_on_AnimationButton_focus_exited"]
